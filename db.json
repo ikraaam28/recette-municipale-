@@ -1,0 +1,33 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "identifiant": "123",
+      "mdp": "maha"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ],
+  "imob": [
+    {
+      "id": "2809",
+      "localisation": "hay lghazela"
+    },
+    {
+      "id": "28",
+      "localisation": "ARIANA"
+    },
+    {
+      "id": "2084",
+      "localisation": "hay lmelaha"
+    },
+    {
+      "id": "25",
+      "localisation": "ariana"
+    }
+  ]
+}

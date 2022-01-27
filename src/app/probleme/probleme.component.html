@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<app-navbar></app-navbar>
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+      <h3>Request a Demo</h3>
+      <p class="blue-text">Répondez simplement à quelques questions<br> Afin que nous puissions personnaliser l'expérience qui vous convient.</p>
+      <div class="card">
+        <h5 class="text-center mb-4">Réclamation d'un problème</h5>
+        <form class="form-card" onsubmit="event.preventDefault()">
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Prenom<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="Enter your first name" onblur="validate(1)"> </div>
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Nom<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Enter your last name" onblur="validate(2)"> </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Votre Email<span class="text-danger"> *</span></label> <input type="text" id="email" name="email" placeholder="" onblur="validate(3)"> </div>
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Votre numero<span class="text-danger"> *</span></label> <input type="text" id="mob" name="mob" placeholder="" onblur="validate(4)"> </div>
+          </div>
+
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-12 flex-column d-flex"> <label class="form-control-label px-3">ç'est quoi votre problème?<span class="text-danger"> *</span></label> <input type="text" id="ans" name="ans" placeholder="" onblur="validate(6)"> </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Envoyer</button> </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
