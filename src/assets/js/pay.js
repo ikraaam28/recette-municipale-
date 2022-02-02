@@ -1,4 +1,4 @@
-window.onload = function () {
+function test() {
 
   const name = document.getElementById('name');
   const cardnumber = document.getElementById('cardnumber');

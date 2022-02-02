@@ -4,12 +4,6 @@
       "id": 1,
       "identifiant": "123",
       "mdp": "maha"
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
     }
   ],
   "imob": [
@@ -28,6 +22,27 @@
     {
       "id": "25",
       "localisation": "ariana"
+    },
+    {
+      "id": "123",
+      "localisation": "nozha"
+    }
+  ],
+  "munic": [
+    {
+      "id": "2809",
+      "localisation": "hay lghazela"
+    },
+    {
+      "id": "6QerWxO"
+    },
+    {
+      "id": "03",
+      "localisation": "nozha"
+    },
+    {
+      "id": "28092001",
+      "localisation": "ariana superieure"
     }
   ]
 }

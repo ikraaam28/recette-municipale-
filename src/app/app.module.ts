@@ -11,11 +11,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProblemeComponent } from './probleme/probleme.component';
 import { PaiementComponent } from './paiement/paiement.component';
 import { SignupPaiementComponent } from './signup-paiement/signup-paiement.component';
-import { LoginPaiementComponent } from './login-paiement/login-paiement.component';
+
 import { PageclientComponent } from './pageclient/pageclient.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AddimobComponent } from './addimob/addimob.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddimobmunicComponent } from './addimobmunic/addimobmunic.component';
+
 
 
 @NgModule({
@@ -27,10 +29,12 @@ import { AdminComponent } from './admin/admin.component';
     ProblemeComponent,
     PaiementComponent,
     SignupPaiementComponent,
-    LoginPaiementComponent,
+
     PageclientComponent,
     AddimobComponent,
     AdminComponent,
+    AddimobmunicComponent,
+
   ],
   imports: [
     BrowserModule,
