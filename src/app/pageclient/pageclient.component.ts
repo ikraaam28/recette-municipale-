@@ -9,16 +9,20 @@ import {ImobSeviceService} from "../Services/imob-sevice.service";
 })
 export class PageclientComponent implements OnInit {
   listImob: imob[];
-
-  constructor(private ImobService:ImobSeviceService) { }
+nb:number=5;
+  constructor(private ImobService:ImobSeviceService) {  }
 
   ngOnInit(): void {
 
     this.ImobService.getImob().subscribe(
       (data:imob[])=> this.listImob = data
     );
+
+
   }
   get(){
     this.ImobService.getImob().subscribe();
+
   }
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../services/user.service";
-import {User} from "../model/user";
+import {User} from "../Model/User";
+import {UserService} from "../Services/user.service";
+
 
 @Component({
   selector: 'app-signup-paiement',
@@ -15,6 +16,7 @@ export class SignupPaiementComponent implements OnInit {
     this.user=new User();
   }
   save(){
+    this.user.role="user";
     this.UserService.postUser(this.user).subscribe();
   }
 }

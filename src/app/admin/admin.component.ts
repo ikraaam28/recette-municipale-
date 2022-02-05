@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {munic} from "../Model/municipale";
-import {MunicService} from "../Services/munic.service";
+import {imob} from "../Model/Imobilier";
+import {ImobSeviceService} from "../Services/imob-sevice.service";
+import {MatPaginator} from "@angular/material/paginator";
 
 
 @Component({
@@ -9,18 +10,19 @@ import {MunicService} from "../Services/munic.service";
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  listmunicipale: munic[];
-  constructor(private municservice: MunicService) {
+  listImob: imob[];
+  constructor(private ImobService:ImobSeviceService) {
 
 
   }
 
   ngOnInit(): void {
-    this.municservice.getMunic().subscribe(
-      (data:munic[])=> this.listmunicipale = data
+    this.ImobService.getImob().subscribe(
+      (data:imob[])=> this.listImob = data
     );
   }
   get(){
-    this.municservice.getMunic().subscribe();
+    this.ImobService.getImob().subscribe();
   }
+
 }

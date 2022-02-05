@@ -14,12 +14,13 @@ import {AddimobmunicComponent} from "./addimobmunic/addimobmunic.component";
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'probleme', component: ProblemeComponent},
-  {path:'paiement',component:PaiementComponent},
+  {path:'paiement/:id/:localisation',component:PaiementComponent},
   {path:'signuppaiement',component:SignupPaiementComponent},
   {path:'pageclient',component:PageclientComponent},
   {path:'addimob',component:AddimobComponent},
   {path:'admin',component:AdminComponent},
   {path:'addimobmunic',component:AddimobmunicComponent},
+
   {path:'', component: HomePageComponent}
 ];
 

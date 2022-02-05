@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
   <title>Recette Municipale</title>
   <link rel="shortcut icon" type="image/x-icon" href="../src/assets/img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -18,86 +20,25 @@
     <a href="javascript:void(0);" id="toggle_btn"> <i class="bi bi-justify-left"></i> </a>
 
     <ul class="nav user-menu">
-      <li class="nav-item dropdown noti-dropdown">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge badge-pill">3</span> </a>
-        <div class="dropdown-menu notifications">
-          <div class="topnav-dropdown-header"> <span class="notification-title">Notifications</span> <a href="javascript:void(0)" class="clear-noti"> Clear All </a> </div>
-          <div class="noti-content">
-            <ul class="notification-list">
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-02.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
-                      <p class="noti-time"><span class="notification-time">4 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-11.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">International Software
-													Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
-                      <p class="noti-time"><span class="notification-time">6 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-17.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">John Hendry</span> sent a cancellation request <span class="noti-title">Apple iPhone
-													XR</span></p>
-                      <p class="noti-time"><span class="notification-time">8 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-13.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">Mercury Software
-												Inc</span> added a new product <span class="noti-title">Apple
-												MacBook Pro</span></p>
-                      <p class="noti-time"><span class="notification-time">12 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="topnav-dropdown-footer"> <a href="#">View all Notifications</a> </div>
-        </div>
-      </li>
+
       <li class="nav-item dropdown has-arrow">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span> </a>
+
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="../assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span>  </a>
         <div class="dropdown-menu">
           <div class="user-header">
-            <div class="avatar avatar-sm"> <img src="../src/assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
-            <div class="user-text">
-              <h6>Soeng Souy</h6>
-              <p class="text-muted mb-0">Administrator</p>
-            </div>
-          </div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item" href="settings.html">Account Settings</a> <a class="dropdown-item" href="login.html">Logout</a> </div>
+            <div class="avatar avatar-sm"> <img src="../assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">  </div>
+
+          </div>
+        </div>
+
       </li>
     </ul>
     <div class="top-nav-search">
       <form>
-        <input type="text" class="form-control" placeholder="Search here">
+        <input type="text" class="form-control" placeholder="Search here" style="background-color: #4a9bcd;border-color: #4a9bcd">
         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
       </form>
+
     </div>
   </div>
   <div class="sidebar" id="sidebar">
@@ -106,15 +47,8 @@
         <ul>
           <li class="active"> <a href="index.html"><i class="bi bi-chevron-double-down"></i> <span>Tableau de bord</span></a> </li>
           <li class="list-divider"></li>
-
-
-
-
-
-
-
-         <li class="submenu"> <a href="#"><i class="bi bi-person-circle"></i><span> Accounts </span> <span class="menu-arrow"></span></a>
-          <ul class="submenu_class" style="display: none;">
+          <li class="submenu"> <a href="#"><i class="bi bi-person-circle"></i><span> Accounts </span> <span class="menu-arrow"></span></a>
+            <ul class="submenu_class" style="display: none;">
               <li><a href="invoices.html">Invoices </a></li>
               <li><a href="payments.html">Payments </a></li>
               <li><a href="expenses.html">Expenses </a></li>
@@ -122,10 +56,6 @@
               <li><a href="provident-fund.html">Provident Fund </a></li>
             </ul>
           </li>
-
-
-
-
         </ul></div>
     </div>
   </div>
@@ -145,7 +75,7 @@
             <div class="card-body">
               <div class="dash-widget-header">
                 <div>
-                  <h3 class="card_widget_header">4</h3>
+                  <h3 class="card_widget_header">{{nb}}</h3>
                   <h6 class="text-muted">Nombre D'immobilier</h6>
                 </div>
                 <br>
@@ -185,9 +115,7 @@
         <div class="col-md-12 d-flex">
           <div class="card card-table flex-fill">
             <div class="card-header">
-              <h4 class="card-title float-left mt-2" style="font-family: Lato">Ajouter vos immobilier !</h4>
-              <br>
-              <button  routerLink="/addimob" type="button" class="btn btn-primary float-right veiwbutton"style="font-family: Lato" > <i class="bi bi-plus-circle"></i> IMMOBILIER</button>
+              <button  routerLink="/addimob" type="button" class="btn btn-primary float-right veiwbutton"style="font-family: Lato;background-color: #4a9acc;letter-spacing: 2px" > <i class="bi bi-plus-circle"></i>  AJOUTER  IMMOBILIER</button>
 
 
 
@@ -197,7 +125,7 @@
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-hover table-center">
-                  <thead>
+                  <thead >
                   <tr style="font-family: Lato; font-weight: bold">
                     <th>IDENTIFIANT</th>
                     <th>LOCALISATION</th>
@@ -208,9 +136,12 @@
                     <td class="text-nowrap">
                       <div style="font-weight: bold">{{p.id}}</div>
                     </td>
+
+
                     <td class="text-nowrap">{{p.localisation}}</td>
 
-                    <td class="text-center" routerLink="/paiement"><a routerLink="/paiement"> <span class="badge badge-pill bg-success inv-badge">payé</span> </a></td>
+                    <td class="text-nowrap center" > <button class="btn btn-success" routerLink="/paiement/{{p.id}}/{{p.localisation}}"  [disabled]="p.etat === 'paye'"><span [ngStyle]="{color: p.etat === 'paye' ? 'white' : 'red'}" class="badge badge-pill bg-success inv-badge">{{p.etat}}</span></button> </td>
+
 
                   </tr>
 

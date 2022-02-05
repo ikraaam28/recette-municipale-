@@ -3,29 +3,49 @@
     {
       "id": 1,
       "identifiant": "123",
-      "mdp": "maha"
+      "email": "ikram@gmail.com",
+      "mdp": "maha",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "identifiant": "123",
+      "email": "admin@gmail.com",
+      "mdp": "123",
+      "role": "admin"
+    },
+    {
+      "email": "m@gmail.com",
+      "mdp": "123",
+      "id": 3,
+      "role": "user"
     }
   ],
   "imob": [
     {
       "id": "2809",
-      "localisation": "hay lghazela"
+      "localisation": "hay lghazela",
+      "etat": "paye"
     },
     {
       "id": "28",
-      "localisation": "ARIANA"
+      "localisation": "ARIANA",
+      "etat": "paye"
     },
     {
       "id": "2084",
-      "localisation": "hay lmelaha"
+      "localisation": "ARIANA",
+      "etat": "paye"
     },
     {
       "id": "25",
-      "localisation": "ariana"
+      "localisation": "ariana",
+      "etat": "paye"
     },
     {
       "id": "123",
-      "localisation": "nozha"
+      "localisation": "nozha",
+      "etat": "non paye"
     }
   ],
   "munic": [
@@ -34,15 +54,16 @@
       "localisation": "hay lghazela"
     },
     {
-      "id": "6QerWxO"
-    },
-    {
       "id": "03",
       "localisation": "nozha"
     },
     {
       "id": "28092001",
       "localisation": "ariana superieure"
+    },
+    {
+      "id": "0",
+      "localisation": "ARIANA"
     }
   ]
 }

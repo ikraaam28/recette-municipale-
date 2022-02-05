@@ -12,6 +12,12 @@ export class ImobSeviceService {
   getImob(){
     return this.http.get<imob[]>(this.url);
   }
+  putImob(id:any, imob:imob){
+    return this.http.put<imob[]>('http://localhost:3000/imob/'+id, imob);
+  }
+  getImobbyId(id:any){
+    return this.http.get<imob[]>('http://localhost:3000/imob/'+id);
+  }
   postImob(imob:imob){
     return this.http.post(this.url,imob);
   }

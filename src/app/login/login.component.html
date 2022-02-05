@@ -31,50 +31,54 @@
                 <div class="center-wrap">
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3" style="color: #1545b3">Se Connecter </h4>
-
-                    <div class="form-group ">
+                  <form [formGroup]="loginForm" (ngSubmit)="loginUser()" >
+                    <div class="form-group" >
                       <h2 class="connecter"> Se Connecter</h2>
                       <div class="input-group flex-nowrap">
 
-                        <span class="input-group-text" id="addon-wrapping">@</span>
-                      <input type="email" name="logemail" class="form-style" placeholder="Votre Email" id="logemail" autocomplete="off" aria-describedby="addon-wrapping" >
-
-                    </div>
 
 
-
+                        <input type="email"  formControlName="user" class="form-control"  placeholder="Votre Email" id="logemail" autocomplete="off" aria-describedby="addon-wrapping" [(ngModel)]="user1.email" required  >
+                      <span *ngIf="user && user['touched'] && user['invalid']" style="color: red" >
+                            email required*
+                        </span>
                     </div>
                     <div class="form-group mt-2">
 
-                      <input type="password" name="logpass" class="form-style" placeholder="Votre mot de passe" id="logpass" autocomplete="off">
-              <!-- maaraftch najoutiha fil input     <i class="bi bi-lock-fill "></i>-->
+                      <input type="password" formControlName="password" class="form-control" placeholder="Votre mot de passe" id="logpass" autocomplete="off" [(ngModel)]="user1.mdp" required>
+                      <span *ngIf="password && password['touched'] && password['invalid']" style="color: red" >
+                      password required*
+                      </span>
                     </div>
-                    <a routerLink="/pageclient"class="btn mt-4" >submit</a>
-                    <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Mot de passe oublié ?</a></p>
+                    <button class="btn mt-4"  [disabled]="loginForm.invalid" (click)="save()">submit</button>
+                    <p class="mb-0 mt-4 text-center"><a href="#" class="link">Mot de passe oublié ?</a></p>
+                      
                   </div>
+                  </form>
                 </div>
               </div>
               <div class="card-back">
                 <div class="center-wrap">
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3" style="color: #1545b3">Créer un compte</h4>
+                  <form>
                     <div class="form-group">
                       <h2 class="cree">Créer Un Compte </h2>
-                      <input type="text" name="logname" class="form-style" placeholder="votre nom complet" id="logname" autocomplete="off">
+                      <input type="text" formControlName="logname" class="form-control" placeholder="votre nom complet" id="logname" autocomplete="off">
 
                     </div>
                     <div class="form-group mt-2">
                       <div class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping">@</span>
-                      <input type="email" name="logemail" class="form-style" placeholder="Votre Email" id="logemail" autocomplete="off" aria-describedby="addon-wrapping">
+
+                      <input type="email" formControlName="logemail" class="form-control" placeholder="Votre Email" id="logemaile" autocomplete="off" aria-describedby="addon-wrapping">
 
                     </div>
                     <div class="form-group mt-2">
-                      <input type="password" name="logpass" class="form-style" placeholder="Votre mot de passe" id="logpass" autocomplete="off">
+                      <input type="password" formControlName="logpass" class="form-control" placeholder="Votre mot de passe" id="logpasse" autocomplete="off">
 
                     </div>
                     <a routerLink="/pageclient" class="btn mt-4" >Valider</a>
-                  </div>
+                  </div></form>
                 </div>
               </div>
             </div>
@@ -84,6 +88,6 @@
     </div>
   </div>
 </div>
-</div>
+  </div></div>
 </body>
 </html>

@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -94,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
               "src/assets/vendor/aos/aos.css",
               "src/assets/vendor/bootstrap/css/bootstrap.min.css",
@@ -102,12 +104,10 @@
               "src/assets/vendor/swiper/swiper-bundle.min.css",
               "src/assets/vendor/nucleo/css/nucleo.css",
               "src/assets/css/bootstrap.min.css",
-              "src/assets/plugins/fontawesome/css/fontawesome.min.css",
-             "src/assets/plugins/fontawesome/css/all.min.css",
+             "src/assets/plugins/fontawesome/css/fontawesome.min.css",
+              "src/assets/plugins/fontawesome/css/all.min.css",
               "src/assets/css/feathericon.min.css",
               "src/assets/plugins/morris/morris.css"
-
-
             ],
             "scripts": [
               "src/assets/js/pay.js"

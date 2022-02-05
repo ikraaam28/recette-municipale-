@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
 import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -19,6 +19,10 @@ import { AdminComponent } from './admin/admin.component';
 import { AddimobmunicComponent } from './addimobmunic/addimobmunic.component';
 
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { NotifierModule } from 'angular-notifier';
+
 
 @NgModule({
   declarations: [
@@ -30,10 +34,13 @@ import { AddimobmunicComponent } from './addimobmunic/addimobmunic.component';
     PaiementComponent,
     SignupPaiementComponent,
 
+
+
     PageclientComponent,
     AddimobComponent,
     AdminComponent,
     AddimobmunicComponent,
+
 
   ],
   imports: [
@@ -41,7 +48,13 @@ import { AddimobmunicComponent } from './addimobmunic/addimobmunic.component';
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NotifierModule
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
