@@ -1,188 +1,46 @@
-<!DOCTYPE html>
-<html >
+<html><body>
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+      <div class="card" >
+        <h5 class="text-center mb-4" style="font-family: Lato;font-weight: bold;font-size: 30px">Ajouter Immobilier</h5>
+        <form class="form-card" [formGroup]="addForm" (ngSubmit)="loginUser()" >
+          <div class="row justify-content-between text-left form-group">
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" style="font-family: Lato;font-weight: bold">Identifiant</label>
+              <input type="text" id="id" class="form-control" formControlName="id" placeholder="" onblur="validate(1)" [(ngModel)]="municipale.id" required> </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-  <title>Hotel Dashboard Template</title>
-  <link rel="shortcut icon" type="image/x-icon" href="../src/assets/img/favicon.png">
-</head>
-
-<body>
-<div class="main-wrapper">
-  <div class="header">
-    <div class="header-left">
-      <a routerLink="" class="logo"> <img src="../assets/img/logorecette.png" alt="logo">  </a>
-
-    </div>
-    <a href="javascript:void(0);" id="toggle_btn"> <i class="bi bi-justify-left"></i> </a>
-
-    <ul class="nav user-menu">
-      <li class="nav-item dropdown noti-dropdown">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="bi bi-bell"></i> <span class="badge badge-pill">3</span> </a>
-        <div class="dropdown-menu notifications">
-          <div class="topnav-dropdown-header"> <span class="notification-title">Notifications</span> <a href="javascript:void(0)" class="clear-noti"> Clear All </a> </div>
-          <div class="noti-content">
-            <ul class="notification-list">
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-02.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
-                      <p class="noti-time"><span class="notification-time">4 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-11.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">International Software
-													Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
-                      <p class="noti-time"><span class="notification-time">6 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-17.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">John Hendry</span> sent a cancellation request <span class="noti-title">Apple iPhone
-													XR</span></p>
-                      <p class="noti-time"><span class="notification-time">8 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="notification-message">
-                <a href="#">
-                  <div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="../src/assets/img/profiles/avatar-13.jpg">
-											</span>
-                    <div class="media-body">
-                      <p class="noti-details"><span class="noti-title">Mercury Software
-												Inc</span> added a new product <span class="noti-title">Apple
-												MacBook Pro</span></p>
-                      <p class="noti-time"><span class="notification-time">12 mins ago</span> </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="topnav-dropdown-footer"> <a href="#">View all Notifications</a> </div>
-        </div>
-      </li>
-      <li class="nav-item dropdown has-arrow">
-        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span> </a>
-        <div class="dropdown-menu">
-          <div class="user-header">
-            <div class="avatar avatar-sm"> <img src="../src/assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
-            <div class="user-text">
-              <h6>Soeng Souy</h6>
-              <p class="text-muted mb-0">Administrator</p>
+            <div *ngIf="id && id['touched'] && id['invalid']" style="color: red; margin-left: -300px"  > id is required *
             </div>
-          </div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item" href="settings.html">Account Settings</a> <a class="dropdown-item" href="login.html">Logout</a> </div>
-      </li>
-    </ul>
-    <div class="top-nav-search">
-      <form>
-        <input type="text" class="form-control" placeholder="Search here">
-        <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-      </form>
+
+          </div>
+          <div class="row justify-content-between text-left form-group">
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3" style="font-family: Lato;font-weight: bold">Localisation</label>
+              <input type="text" id="loc"  class="form-control" formControlName="loc" placeholder="" onblur="validate(3)" [(ngModel)]="municipale.localisation" required> </div>
+            <div *ngIf="loc && loc['touched'] && loc['invalid']" style="color: red; margin-left: -300px"  > loc is required *
+            </div>
+
+          </div>
+          <div class="row justify-content-between text-left form-group">
+            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3"style="font-family: Lato;font-weight: bold">Etat</label>
+              <input type="text" id="eta"  class="form-control" formControlName="eta" placeholder="" onblur="validate(3)" [(ngModel)]="municipale.etat" required> </div>
+            <div *ngIf="eta && eta['touched'] && eta['invalid']" style="color: red; margin-left: -300px"  > etat is required *
+            </div>
+          </div>
+
+
+
+          <div class="row justify-content-end">
+
+            <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary" routerLink="/admin"   [disabled]="addForm.invalid" (click)="save()">Envoyer</button> </div>
+
+            <div class="form-group col-sm-6 ">  <img class="carte" src="assets/img/rm.png"> </div>
+          </div><a routerLink="/admin" style="background-color: none"><i class="bi bi-box-arrow-right" style="font-size: 30px;margin-left: 650px"></i></a>
+
+        </form>
+      </div>
     </div>
   </div>
-  <div class="sidebar" id="sidebar">
-    <div class="sidebar-inner slimscroll">
-      <div id="sidebar-menu" class="sidebar-menu">
-        <ul>
-          <li class="active"> <a href="index.html"><i class="bi bi-chevron-double-down"></i> <span>Tableau de bord</span></a> </li>
-          <li class="list-divider"></li>
-
-
-
-
-
-
-
-          <li class="submenu"> <a href="#"><i class="bi bi-person-circle"></i><span> Accounts </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-              <li><a href="invoices.html">Invoices </a></li>
-              <li><a href="payments.html">Payments </a></li>
-              <li><a href="expenses.html">Expenses </a></li>
-              <li><a href="taxes.html">Taxes </a></li>
-              <li><a href="provident-fund.html">Provident Fund </a></li>
-            </ul>
-          </li>
-
-          <li> <a href="calendar.html"><i class="bi bi-calendar-month-fill"></i> <span>Calendar</span></a> </li>
-
-          <li class="submenu"> <a href="#"><i class="bi bi-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-            <ul class="submenu_class" style="display: none;">
-              <li><a href="tables-basic.html">Basic Table </a></li>
-              <li><a href="tables-datatables.html">Data Table </a></li>
-            </ul>
-          </li>
-        </ul></div>
-    </div>
-  </div>
-  <div class="page-wrapper">
-    <div class="content container-fluid">
-      <div class="page-header">
-        <div class="row">
-          <div class="col-sm-12 mt-5">
-
-
-
-
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-3 col-md-2"></div>
-                <div class="col-lg-6 col-md-8 login-box">
-                  <div class="col-lg-12 login-key">
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                  </div>
-                  <div class="col-lg-12 login-title" >
-                    Ajouter Immobilier
-                  </div>
-
-                  <div class="col-lg-12 login-form">
-                    <div class="col-lg-12 login-form">
-                      <form>
-                        <div class="form-group">
-                          <label class="form-control-label">Identifiant De l'immobilier</label>
-                          <input type="text" class="form-control" name="id" [(ngModel)]="municipale.id">
-                        </div>
-                        <div class="form-group">
-                          <label class="form-control-label">Localisation</label>
-                          <input type="text" class="form-control" name="localisation" [(ngModel)]="municipale.localisation">
-                        </div>
-
-                        <div class="col-lg-12 loginbttm">
-                          <div class="col-lg-6 login-btm login-text">
-                            <!-- Error Message -->
-                          </div>
-                          <div class="col-lg-6 login-btm login-button">
-                            <button type="submit" class="btn btn-outline-primary" style="font-family: Lato" routerLink="/admin" (click)="save()">Ajouter</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-2"></div>
-                </div>
-              </div>
-
-
-
-            </div></div></div></div></div></div>
 </div>
+
+
 </body></html>

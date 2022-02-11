@@ -21,8 +21,8 @@ import { AddimobmunicComponent } from './addimobmunic/addimobmunic.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { NotifierModule } from 'angular-notifier';
-
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {ToastrModule} from "ngx-toastr";
 
 @NgModule({
   declarations: [
@@ -51,7 +51,9 @@ import { NotifierModule } from 'angular-notifier';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    NotifierModule
+MatAutocompleteModule,
+    ToastrModule.forRoot(),
+    RouterModule
 
 
 

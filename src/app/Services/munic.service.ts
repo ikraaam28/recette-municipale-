@@ -16,4 +16,7 @@ export class MunicService {
   postMunic(munic:munic){
     return this.http.post(this.url,munic);
   }
+  putMunic(id:any,munic:munic){
+    return this.http.put<munic[]>('http://localhost:3000/munic/'+id,munic);
+  }
 }

@@ -1,5 +1,102 @@
-<a routerLink="/pageclient"><i class="bi bi-box-arrow-left" style="font-size: 50px;color: #763950"></i></a>
-<div class="checkout">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+</head>
+<body>
+
+<input type="checkbox" id="sidebar-toggle">
+<div class="sidebar" style="background-color:#1545b3">
+  <div class="sidebar-header" >
+
+
+    <a routerLink="/pageclient/{{id}}">  <img src="assets/img/logorecette.png"  style="max-height:165px;margin-top:35px " ></a>
+
+    <label for="sidebar-toggle" class="ti-menu-alt"></label>
+  </div>
+
+  <div class="sidebar-menu">
+    <ul>
+      <li>
+        <a routerLink="/pageclient">
+          <span class="ti-home"></span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-face-smile"></span>
+          <span>Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-agenda"></span>
+          <span>Tasks</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-clipboard"></span>
+          <span>Leaves</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-folder"></span>
+          <span>Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-time"></span>
+          <span>Timesheet</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-book"></span>
+          <span>Contacts</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span class="ti-settings"></span>
+          <span>Account</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="main-content">
+
+  <header>
+    <div class="search-wrapper">
+      <span class="ti-search "style="color: #1545b3"></span>
+      <input type="search" placeholder="Search" style="color: #1545b3">
+    </div>
+
+    <div class="social-icons">
+      <span class="ti-bell" style="color: #1545b3"></span>
+      <span class="ti-comment" style="color: #1545b3" ></span>
+      <div></div>
+    </div>
+  </header>
+
+  <main>
+
+
+
+    <section class="recent">
+
+    <div class="checkout">
   <div class="credit-card-box">
     <div class="flip">
       <div class="front">
@@ -65,7 +162,7 @@
     </div>
   </div>
   <form class="form" autocomplete="off" novalidate>
-    <fieldset>
+    <fieldset class="f">
       <label for="card-number">Card Number</label>
       <input type="num" formControlName="card" id="card-number" class="input-cart-number" maxlength="4" required/>
 
@@ -116,8 +213,9 @@
       <label for="card-ccv">CCV</label>
       <input type="text" id="card-ccv" maxlength="3" />
     </fieldset>
-    <button class="btn" (click)="paye()" routerLink="/pageclient"><i class="fa fa-lock"></i> submit</button>
+    <button class="btn" (click)="paye()" ><i class="fa fa-lock"></i> payer</button>
   </form>
 </div>
 
 
+</section></main></div></body></html>

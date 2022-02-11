@@ -107,7 +107,7 @@
              "src/assets/plugins/fontawesome/css/fontawesome.min.css",
               "src/assets/plugins/fontawesome/css/all.min.css",
               "src/assets/css/feathericon.min.css",
-              "src/assets/plugins/morris/morris.css"
+              "src/assets/plugins/morris/morris.css",
             ],
             "scripts": [
               "src/assets/js/pay.js"

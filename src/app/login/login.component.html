@@ -9,85 +9,47 @@
 
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body >
 
 <app-navbar></app-navbar>
 
-
-<br>
-<br>
-
-<div class="section">
-  <div class="container">
-    <div class="row full-height justify-content-center">
-      <div class="col-12 text-center align-self-center py-5">
-        <div class="section pb-5 pt-5 pt-sm-2 text-center">
-          <h6 class="mb-0 pb-3"><span style="color: #499ace">Se connecter </span><span style="color: #499ace">  &nbsp;Créer un compte</span></h6>
-          <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-          <label for="reg-log"></label>
-          <div class="card-3d-wrap mx-auto">
-            <div class="card-3d-wrapper">
-              <div class="card-front">
-                <div class="center-wrap">
-                  <div class="section text-center">
-                    <h4 class="mb-4 pb-3" style="color: #1545b3">Se Connecter </h4>
-                  <form [formGroup]="loginForm" (ngSubmit)="loginUser()" >
-                    <div class="form-group" >
-                      <h2 class="connecter"> Se Connecter</h2>
-                      <div class="input-group flex-nowrap">
-
-
-
-                        <input type="email"  formControlName="user" class="form-control"  placeholder="Votre Email" id="logemail" autocomplete="off" aria-describedby="addon-wrapping" [(ngModel)]="user1.email" required  >
-                      <span *ngIf="user && user['touched'] && user['invalid']" style="color: red" >
-                            email required*
-                        </span>
-                    </div>
-                    <div class="form-group mt-2">
-
-                      <input type="password" formControlName="password" class="form-control" placeholder="Votre mot de passe" id="logpass" autocomplete="off" [(ngModel)]="user1.mdp" required>
-                      <span *ngIf="password && password['touched'] && password['invalid']" style="color: red" >
-                      password required*
-                      </span>
-                    </div>
-                    <button class="btn mt-4"  [disabled]="loginForm.invalid" (click)="save()">submit</button>
-                    <p class="mb-0 mt-4 text-center"><a href="#" class="link">Mot de passe oublié ?</a></p>
-                      
-                  </div>
-                  </form>
-                </div>
-              </div>
-              <div class="card-back">
-                <div class="center-wrap">
-                  <div class="section text-center">
-                    <h4 class="mb-4 pb-3" style="color: #1545b3">Créer un compte</h4>
-                  <form>
-                    <div class="form-group">
-                      <h2 class="cree">Créer Un Compte </h2>
-                      <input type="text" formControlName="logname" class="form-control" placeholder="votre nom complet" id="logname" autocomplete="off">
-
-                    </div>
-                    <div class="form-group mt-2">
-                      <div class="input-group flex-nowrap">
-
-                      <input type="email" formControlName="logemail" class="form-control" placeholder="Votre Email" id="logemaile" autocomplete="off" aria-describedby="addon-wrapping">
-
-                    </div>
-                    <div class="form-group mt-2">
-                      <input type="password" formControlName="logpass" class="form-control" placeholder="Votre mot de passe" id="logpasse" autocomplete="off">
-
-                    </div>
-                    <a routerLink="/pageclient" class="btn mt-4" >Valider</a>
-                  </div></form>
-                </div>
-              </div>
-            </div>
+<div class="form-bg" >
+  <div class="container " style="margin-left:400px;margin-top: 200px">
+    <div class="row">
+      <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8">
+        <div class="form-container">
+          <div class="form-icon">
+            <i class="fa fa-user-circle"></i>
+            <span class="signup"><a routerLink="/signup">vous n'avez pas de compte ? creer un compte </a></span>
           </div>
+          <form class="form-horizontal" [formGroup]="logForm" (ngSubmit)="loginUser()" >
+            <h3 class="title" style="font-family: Lato">Member Login</h3>
+            <div class="form-group">
+              <span class="input-icon"><i class="bi bi-envelope"></i></span>
+              <input  class="form-control" formControlName="user"   type="email" placeholder="Email Address" id="user"  [(ngModel)]="user1.email" required>
+
+              <div *ngIf="user && user['touched'] && user['invalid']" style="color: red" >
+                            email required*
+                        </div>
+
+            </div>
+            <div class="form-group">
+              <span class="input-icon"><i class="bi bi-lock-fill"></i></span>
+              <input class="form-control" type="password" formControlName="password"  placeholder="Password"  id="password" [(ngModel)]="user1.mdp" required>
+              <div *ngIf="password && password['touched'] && password['invalid']" style="color: red" >
+                      password required*
+                      </div>
+            </div>
+            <button class="btn signin" [disabled]="logForm.invalid" (click)="save()" >Login</button>
+            <span class="forgot-pass"><a href="#">Forgot Username/Password?</a></span>
+          </form>
         </div>
       </div>
     </div>
   </div>
 </div>
-  </div></div>
 </body>
 </html>
+
+
+
